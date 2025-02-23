@@ -1,0 +1,18 @@
+.data
+    tableau db 10 Dup (?)
+.code
+main proc
+    mov cx, lengthof           
+    mov BP, offset          
+    mov AL,0             
+
+etiq:                          
+    add AL, [BP]         
+  inc BP                 
+    loop etiq                  
+
+    mov somme, AL
+
+endp
+
+end main
